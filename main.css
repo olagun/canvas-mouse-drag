@@ -1,0 +1,128 @@
+@import "fonts.css";
+
+:root {
+  --main-color: #000000;
+  --alt-color: #fcf9ed;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  font-family: "GT Walsheim Pro";
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  border-bottom: 1px solid var(--main-color);
+}
+
+.p-bar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 6px;
+  height: 100%;
+  background-color: var(--main-color);
+}
+
+.app {
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  color: var(--main-color);
+  background-color: var(--alt-color);
+}
+
+.g {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  padding: 0 32px;
+  grid-column-gap: 16px;
+}
+
+.g-l {
+  grid-column: 1/6;
+}
+
+.g-r {
+  grid-column: 6/12;
+}
+
+.f {
+  display: flex;
+}
+
+.f-c {
+  flex-direction: column;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 20vw;
+  font-weight: 500;
+  line-height: 20vw;
+  color: transparent;
+  white-space: nowrap;
+  -webkit-text-stroke: 2px var(--main-color);
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 2vw;
+  line-height: 2.5vw;
+  margin-bottom: 2vw;
+}
+
+p {
+  font-weight: 400;
+  font-size: 1.5vw;
+  line-height: 2.2vw;
+  margin-bottom: 2vw;
+}
+
+.pv {
+  padding: 10vh 0;
+}
+
+.rr {
+  transform-origin: 0 0;
+  transform: rotate(90deg);
+}
+
+.fl-r {
+  float: right;
+}
+
+.j-r {
+  justify-content: right;
+}
+
+.no-s {
+  width: 0;
+  height: 0;
+}
+
+@media (max-width: 750px) {
+  .rr {
+    transform: none;
+  }
+
+  .no-s {
+    width: auto;
+    height: auto;
+  }
+
+  .g {
+    display: block;
+  }
+
+  p {
+    font-size: 5vw;
+    line-height: 6vw;
+  }
+}
